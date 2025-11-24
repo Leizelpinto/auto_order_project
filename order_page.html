@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Page</title>
+</head>
+<body>
+<h2>Order Items</h2>
+<label>Item Name:</label>
+<input type="text" id="itemName"><br>
+<label>Quantity:</label>
+<input type="number" id="quantity"><br>
+<label>Price:</label>
+<input type="number" id="price"><br>
+<button id="addToCart" onclick="addItem()">Add Item</button>
+
+<script>
+function addItem() {
+    alert("Order Placed!");
+    document.getElementById("itemName").value = "";
+    document.getElementById("quantity").value = "";
+    document.getElementById("price").value = "";
+}
+</script>
+</body>
+</html>

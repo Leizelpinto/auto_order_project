@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo Order App</title>
+    <script>
+        function login() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            if(username === "demoUser" && password === "demoPass") {
+                alert("Logged in!");
+                document.getElementById("loginPage").style.display = "none";
+                document.getElementById("orderPage").style.display = "block";
+            } else {
+                alert("Invalid credentials!");
+            }
+        }
+
+        function addToCart() {
+            const item = document.getElementById("itemName").value;
+            const qty = document.getElementById("quantity").value;
+            const price = document.getElementById("price").value;
+            if(item && qty && price) {
+                alert("Order Placed!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="loginPage">
+        <h2>Login</h2>
+        Username: <input type="text" id="username"><br><br>
+        Password: <input type="password" id="password"><br><br>
+        <button id="loginBtn" onclick="login()">Login</button>
+    </div>
+
+    <div id="orderPage" style="display:none">
+        <h2>Place Orders</h2>
+        Item: <input type="text" id="itemName"><br><br>
+        Quantity: <input type="number" id="quantity"><br><br>
+        Price: <input type="number" id="price"><br><br>
+        <button id="addToCart" onclick="addToCart()">Add to Cart</button>
+    </div>
+</body>
+</html>
